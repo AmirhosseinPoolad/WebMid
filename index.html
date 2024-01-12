@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="center">
+        <div class="flex-container-column">
+            <div style='padding-right: 2em;'>
+                <h1>Mr. or Ms.?</h1>
+                <form method="get" action="https://api.genderize.io/">
+                    Name: <input type="text" name="name" maxlength="255" pattern="^[a-z A-z]*$"/> <br />
+                    <input type="radio" name="gender" /> Male <br />
+                    <input type="radio" name="gender" /> Female <br />
+                    <button type="submit">Submit</button><br />
+                    <button type="save">Save</button><br />
+                </form>
+            </div>
+            <div style='padding-left: 2em;'>
+                <h1>Prediction</h1>
+                <div id="pred-box"></div>
+                <div id="saved-box">
+                    <h2 id="saved-pred">Saved Answer</h2>
+                    <button type="clear">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
