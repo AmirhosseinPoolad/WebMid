@@ -3,6 +3,7 @@
 
 <head>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="code.js" defer></script>
 </head>
 
 <body>
@@ -10,20 +11,22 @@
         <div class="flex-container-column">
             <div style='padding-right: 2em;'>
                 <h1>Mr. or Ms.?</h1>
-                <form method="get" action="https://api.genderize.io/">
+                <form action="" method="get" id="submit-form">
                     Name: <input type="text" name="name" maxlength="255" pattern="^[a-z A-z]*$"/> <br />
-                    <input type="radio" name="gender" /> Male <br />
-                    <input type="radio" name="gender" /> Female <br />
-                    <button type="submit">Submit</button><br />
-                    <button type="save">Save</button><br />
+                    <input type="radio" name="gender" value="male"/> Male <br />
+                    <input type="radio" name="gender" value="female"/> Female <br />
+                    <input type="submit"></button><br />
                 </form>
+                <button type="button" id="save-button">Save</button><br />
             </div>
             <div style='padding-left: 2em;'>
                 <h1>Prediction</h1>
                 <div id="pred-box"></div>
-                <div id="saved-box">
+                <div>
                     <h2 id="saved-pred">Saved Answer</h2>
-                    <button type="clear">Clear</button>
+                    <div  id="saved-box"></div>
+                    <button type="button" id="clear-button">Clear</button>
+                    
                 </div>
             </div>
         </div>
