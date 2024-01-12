@@ -1,12 +1,31 @@
+body{
+    /*show background image*/
+    background-image: url("JCDenton2.jpg");
+  }
+
+  /*flex container to align the two rows*/
 .flex-container-column {
+    /*flex container*/
     display: flex;
+    /*elements aligned in a row*/
     flex-direction: row;
+    /*put each element on top of the "column"*/
     align-items: start;
 }
 
+/*applied to a div to align it to center*/
 .center {
+    /*white backgroud with 90% opacity*/
+    background-color: rgba(255, 255, 255, 0.9);
+    /*black text color*/
+    color: #000000;
+    /*position is fixed*/
     position: fixed;
+    /*with 1em of padding*/
+    padding: 1em;
+    /*place the top left corner of div in the middle of the window*/
     top: 50%;
     left: 50%;
+    /*translate the div to place the center of div in the middle of the window*/
     transform: translate(-50%, -50%);
 }
